@@ -2,19 +2,18 @@ FROM microimages/php-apache
 
 WORKDIR /app
 
-VOLUME /app
-
 ENV WORDPRESS_VERSION 4.3
 
 RUN apk add --update tar
 
-RUN wget -O wordpress.tar.gz https://wordpress.org/wordpress-${WORDPRESS_VERSION}.tar.gz \
-	&& tar -xzf wordpress.tar.gz \
-	&& rm wordpress.tar.gz \
+RUN wget -O /tmp/wordpress.tar.gz https://wordpress.org/wordpress-${WORDPRESS_VERSION}.tar.gz \
+	&& tar -xzf /tmp/wordpress.tar.gz -C /app/ --strip-components=1 \
+	&& rm /tmp/wordpress.tar.gz \
 	&& chown -R nobody:nobody /app
 
-#--strip-components=1 \
+VOLUME /app
+
 COPY docker-entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["php-fpm"]
+
