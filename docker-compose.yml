@@ -1,0 +1,11 @@
+wordpress:
+  image: index.csphere.cn/microimages/wordpress
+  links:
+    - db:mysql
+  ports:
+    - 8080:80
+
+db:
+  image: index.csphere.cn/microimages/mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: example
