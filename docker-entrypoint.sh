@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-set -x
 
 if [[ "$1" == apache2-foreground ]] || [ "$1" == php-fpm ]; then
 	if [ -n "$MYSQL_PORT_3306_TCP" ]; then
