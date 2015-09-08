@@ -8,4 +8,4 @@ wordpress:
 db:
   image: index.csphere.cn/microimages/mysql
   environment:
-    MYSQL_ROOT_PASSWORD: example
+    MYSQL_ROOT_PASSWORD: hellocsphere
