@@ -12,7 +12,7 @@ docker pull $REG_URL/$BASE_IMAGE
 
 docker tag -f $REG_URL/$BASE_IMAGE $BASE_IMAGE
 
-docker build --no-cache -t $REG_URL/microimages/$IMAGE .
+docker build -t $REG_URL/microimages/$IMAGE .
 
 #./test.sh
 
