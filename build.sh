@@ -6,7 +6,7 @@ export CON_NAME=wordpress_t
 export REG_URL=d.nicescale.com:5000
 export IMAGE=wordpress
 export TAGS="4 4.3"
-export BASE_IMAGE=microimages/php-fpm
+export BASE_IMAGE=microimages/php-apache
 
 docker pull $REG_URL/$BASE_IMAGE
 
