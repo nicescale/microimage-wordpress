@@ -4,7 +4,7 @@ WORKDIR /app
 
 ENV WORDPRESS_VERSION 4.3
 
-RUN apk add --update tar
+RUN apk add --update tar sed
 
 RUN wget -O /tmp/wordpress.tar.gz https://wordpress.org/wordpress-${WORDPRESS_VERSION}.tar.gz \
 	&& tar -xzf /tmp/wordpress.tar.gz -C /app/ --strip-components=1 \
