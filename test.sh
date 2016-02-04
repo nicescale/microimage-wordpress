@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -xe
 
 CON_NAME=wordpress_t
 IMAGE=index.csphere.cn/microimages/wordpress
