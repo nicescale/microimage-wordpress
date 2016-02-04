@@ -3,7 +3,6 @@
 set -xe
 
 CON_NAME=wordpress_t
-IMAGE=index.csphere.cn/microimages/wordpress
 docker rm -f "$CON_NAME" some-mysql > /dev/null 2>&1 || true
 
 docker pull microimages/mysql
