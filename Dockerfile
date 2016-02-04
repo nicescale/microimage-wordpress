@@ -2,7 +2,7 @@ FROM microimages/php-apache
 
 WORKDIR /app
 
-ENV WORDPRESS_VERSION 4.3
+ENV WORDPRESS_VERSION 4.4.2
 
 RUN apk add --update tar sed
 

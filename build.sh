@@ -5,7 +5,7 @@ set -e
 export CON_NAME=wordpress_t
 export REG_URL=index.csphere.cn
 export IMAGE=microimages/wordpress
-export TAGS="4 4.3"
+export TAGS="4 4.4 4.4.2"
 export BASE_IMAGE=microimages/php-apache
 
 docker pull $BASE_IMAGE
